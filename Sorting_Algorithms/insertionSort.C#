@@ -1,0 +1,35 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    static void Main(string[] args)
+    {
+      int[] arr = {6,3,4,9,0,7,1};
+      Console.WriteLine(" ");
+      
+      insertionSort(arr);
+      
+      for(int i=0;i< arr.Length; i++){
+      Console.WriteLine($"{arr[i]} ");
+    }
+    }
+    
+    static void insertionSort(int[] arr)
+    {
+    	for(int i=1;i < arr.Length; i++)
+        {
+        	int temp = arr[i];
+            
+            int j=i-1;
+            while(j>=0 && arr[j] > temp)
+            {
+                arr[j+1] = arr[j];
+                j--;
+            }
+            arr[j+1] = temp;
+        }
+    }
+}
